@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SignIn from "./Pages/SignIn/SignIn.jsx";
+import { FormularioProvider } from "./Pages/Context/Context.jsx";
 import Home from "./Pages/Home/Home.jsx";
 import Filtrado from "./Pages/Filtrado/Home.jsx";
 
@@ -13,11 +14,14 @@ function App() {
   ]);
 
   return (
-    <>
+    
+    <FormularioProvider>
       <RouterProvider router={router}>
         <Home />
       </RouterProvider>
-    </>
+
+    </FormularioProvider>
+    
   );
 }
 
